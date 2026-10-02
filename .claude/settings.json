@@ -48,6 +48,18 @@
           }
         ]
       }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "description": "Commit and push learning progress so it survives cloud sessions",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/autocommit-progress.sh",
+            "timeout": 60
+          }
+        ]
+      }
     ]
   },
   "description": "Fluent - The AI Language Learning Kit",
