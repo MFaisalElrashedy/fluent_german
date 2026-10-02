@@ -62,6 +62,7 @@ When the learner uses these commands, follow their specific flows:
 - **/fluent-progress** - Show statistics, visualize progress
 - **/fluent-review** - Today's spaced repetition reviews
 - **/fluent-setup** - Interactive onboarding for new learners
+- **/fluent-export-anki** - Export spaced-repetition items to an Anki-importable file (read-only)
 
 See `.claude/skills/` directory for detailed skill specifications. Each skill lives at `.claude/skills/<name>/SKILL.md` with YAML frontmatter. Learner-facing skills (`/fluent-setup`, `/fluent-learn`, `/fluent-vocab`, `/fluent-writing`, `/fluent-speaking`, `/fluent-reading`, `/fluent-review`) carry `disable-model-invocation: true` so they only fire when the learner types the slash command. `/fluent-progress` auto-invokes on stats questions. Helper skills (`fluent-sm2-calculator`, `fluent-feedback-formatter`, `fluent-db-updater`, `fluent-session-analyzer`) are also slash-invokable (no gating) and auto-load whenever Claude needs them during a session — they're visible in the slash menu so curious learners can open the reference directly.
 
