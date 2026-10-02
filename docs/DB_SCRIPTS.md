@@ -120,7 +120,9 @@ Everything else is optional; omitted fields do not update.
 
 ### Exit codes
 - `0` success
-- `1` validation error (bad/missing JSON, missing required field)
+- `1` validation error (bad/missing JSON, missing required field, or a
+  `review_results` entry with an unknown or duplicate `item_id` or a `quality`
+  that is not an integer 0–5); no files were modified
 - `2` I/O or logic error (full traceback on stderr; no files were modified)
 
 ## Data model notes

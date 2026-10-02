@@ -4,7 +4,24 @@ All notable changes to Fluent will be documented in this file.
 
 ## [Unreleased]
 
+### Added
+
+- Answer-leak guard (`answer-leak-guard.py`, PR #15): a `Stop` hook
+  voids an exercise whose message shows the answer after the prompt line, and a
+  `UserPromptSubmit` reminder keeps exercise messages ending at that line.
+- `/fluent-export-anki` (`export-anki.py`, from PR #11): read-only
+  export of spaced-repetition items to an Anki-importable TSV file.
+
 ### Fixed
+
+- `update-db.py` accepts the JSON payload as `argv[1]` as well as on stdin, so
+  it no longer blocks when invoked without a pipe (PR #11).
+- `update-db.py` rejects (exit `1`, nothing written) a `review_results` entry
+  with an unknown `item_id`, a duplicate `item_id`, or a `quality` that is not
+  an integer 0–5. These were previously skipped, double-applied, or fed into
+  the easiness factor silently (from PR #18).
+- Docs: a wrong answer is scheduled for tomorrow's queue, not kept in today's;
+  reusing a `session_id` appends instead of replacing (from PR #18).
 
 - `update-db.py` no longer corrupts learner databases when the session payload
   contains non-ASCII text (CJK, Arabic, …) on Windows/Git Bash. `force_utf8_io()`
