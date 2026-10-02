@@ -1,10 +1,6 @@
-# Personal learning data - DO NOT commit
-/data/*.json
+# Learning progress (data/*.json, results/*.md) is committed on purpose so
+# it survives ephemeral cloud sessions. Only hook backups are ignored.
 /data/*.json.backup-*
-/results/*.md
-# Except the README files which explain the structure
-!/data/README.md
-!/results/README.md
 
 # Personal writing/practice files
 myfile.txt

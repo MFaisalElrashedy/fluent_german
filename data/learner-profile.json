@@ -1,0 +1,74 @@
+{
+  "learner": {
+    "name": "Learner",
+    "native_language": "English",
+    "other_languages": [],
+    "target_language": "German",
+    "current_level": "A2",
+    "target_level": "C1",
+    "daily_goal_minutes": 15,
+    "learning_style": "conversational",
+    "learning_style_notes": "70% speaking practice, 30% everything else (vocab, writing, reading, grammar)",
+    "motivation": "living_abroad",
+    "timeline": "2+ years"
+  },
+  "profile_created": "2026-10-02",
+  "last_updated": "2026-10-02",
+  "current_streak_days": 0,
+  "total_sessions": 0,
+  "total_study_minutes": 0,
+  "skills": {
+    "writing": {
+      "current_level": 0,
+      "confidence": 0,
+      "last_practiced": null,
+      "total_practice_time": 0
+    },
+    "speaking": {
+      "current_level": 0,
+      "confidence": 0,
+      "last_practiced": null,
+      "total_practice_time": 0
+    },
+    "vocabulary": {
+      "current_level": 0,
+      "confidence": 0,
+      "last_practiced": null,
+      "total_practice_time": 0
+    },
+    "reading": {
+      "current_level": 0,
+      "confidence": 0,
+      "last_practiced": null,
+      "total_practice_time": 0
+    },
+    "listening": {
+      "current_level": 0,
+      "confidence": 0,
+      "last_practiced": null,
+      "total_practice_time": 0
+    }
+  },
+  "focus_areas": [
+    "speaking"
+  ],
+  "achievements": [
+    {
+      "id": "profile_created",
+      "name": "Getting Started",
+      "earned_date": "2026-10-02",
+      "description": "Created your learning profile"
+    }
+  ],
+  "preferences": {
+    "difficulty_preference": "adaptive",
+    "exercise_types_preferred": [
+      "conversation",
+      "speaking",
+      "quick_drills"
+    ],
+    "feedback_style": "immediate_with_explanation",
+    "gamification_enabled": true,
+    "use_emojis": true
+  }
+}
