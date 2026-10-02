@@ -13,6 +13,18 @@
         ]
       }
     ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "description": "Remind the tutor to end exercise messages at the prompt line",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/answer-leak-guard.py\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
     "SessionEnd": [
       {
         "hooks": [
@@ -52,6 +64,12 @@
     "Stop": [
       {
         "hooks": [
+          {
+            "type": "command",
+            "description": "Block exercise messages that leak the answer key",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/answer-leak-guard.py\"",
+            "timeout": 10
+          },
           {
             "type": "command",
             "description": "Commit and push learning progress so it survives cloud sessions",
