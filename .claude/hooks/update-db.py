@@ -82,6 +82,34 @@ def date_plus_days(today_str: str, days: int) -> str:
     return date_str(parse_date(today_str) + timedelta(days=days))
 
 
+def validate_review_results(session: dict, sr_items: dict):
+    """Raise ValueError for review_results the SM-2 update would mishandle
+    silently: an unknown item_id is skipped (the review is lost), a duplicate
+    item_id runs SM-2 twice, and a quality outside 0..5 corrupts the easiness
+    factor. Call before any database copy is modified."""
+    reviews = session.get("review_results", [])
+    if not isinstance(reviews, list):
+        raise ValueError("review_results must be a list")
+    seen = set()
+    for review in reviews:
+        if not isinstance(review, dict):
+            raise ValueError("each review_results entry must be an object")
+        item_id = review.get("item_id")
+        if not isinstance(item_id, str) or not item_id.strip():
+            raise ValueError("review_results item_id must be a non-empty string")
+        if item_id in seen:
+            raise ValueError(f"duplicate review_results item_id: {item_id}")
+        seen.add(item_id)
+        quality = review.get("quality")
+        # bool is an int subclass: True/False must not pass as quality 1/0.
+        if isinstance(quality, bool) or not isinstance(quality, int) or not 0 <= quality <= 5:
+            raise ValueError(
+                f"review_results quality for {item_id} must be an integer from 0 to 5, got {quality!r}")
+        if item_id not in sr_items:
+            raise ValueError(
+                f"unknown review_results item_id: {item_id} (not in spaced-repetition.json items)")
+
+
 def get_week_start(today_str: str) -> str:
     d = parse_date(today_str)
     monday = d - timedelta(days=d.weekday())
@@ -589,6 +617,12 @@ def main():
     except Exception as e:
         print(f"[Fluent] Error loading databases: {e}", file=sys.stderr)
         sys.exit(2)
+
+    try:
+        validate_review_results(session, originals["sr"].get("items", {}))
+    except ValueError as e:
+        print(f"[Fluent] Error: {e}", file=sys.stderr)
+        sys.exit(1)
 
     # Work on deep copies so a mid-run exception leaves disk untouched.
     data = {k: copy.deepcopy(v) for k, v in originals.items()}

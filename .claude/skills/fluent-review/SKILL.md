@@ -150,7 +150,7 @@ Use the `fluent-db-updater` skill:
 
 - `command_used: "/fluent-review"`, `skills_practiced: [derived from reviewed items]`
 - `skill_scores` — aggregate per skill touched
-- `review_results[]` — every item reviewed, with `quality`
+- `review_results[]` — every item reviewed, with `quality`; never submit the same `item_id` twice
 - `errors[]` — only patterns where the learner got it wrong (bumps frequency)
 - `focus_next_session[]` — the 2-3 items with lowest quality this session
 
@@ -182,7 +182,7 @@ Learner: "the door"
 >
 > **Score: 3/10** 💪 Easy to mix — we'll review this again soon.
 >
-> (Logged: `review_results[]` item quality=1 → `interval_days=1, repetitions=0`, stays in today's queue.)
+> (Logged: `review_results[]` item quality=1 → `interval_days=1, repetitions=0`; the updater schedules it for tomorrow.)
 
 ### Example 2 — correct answer with mastery bump
 

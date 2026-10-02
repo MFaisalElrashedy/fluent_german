@@ -8,6 +8,7 @@ session report, and asserts schema invariants on the output files.
 Usage:
     python3 tests/test_update_db.py
 """
+import copy
 import json
 import os
 import shutil
@@ -433,6 +434,46 @@ class UpdateDbSmokeTest(unittest.TestCase):
                 self.assertEqual(proc.returncode, 0, msg=proc.stderr)
                 after = len(self._load("learner-profile.json").get("achievements", []))
                 self.assertEqual(after, before)
+
+    # Ported from m98/fluent#18: review_results must fail loudly instead of
+    # being skipped (unknown id), double-applied (duplicate) or corrupting
+    # the easiness factor (quality outside 0..5).
+    def test_duplicate_review_result_exits_1_without_mutation(self):
+        payload = copy.deepcopy(SESSION_PAYLOAD)
+        payload["session_id"] = "session-022"
+        payload["review_results"] = [
+            {"item_id": "vocab_dag", "quality": 5},
+            {"item_id": "vocab_dag", "quality": 4},
+        ]
+        before = self._load("spaced-repetition.json")
+        proc = self._run(payload)
+        self.assertEqual(proc.returncode, 1)
+        self.assertIn(b"duplicate review_results item_id", proc.stderr)
+        self.assertEqual(self._load("spaced-repetition.json"), before)
+        self.assertEqual(len(self._load("session-log.json")["sessions"]), 1)
+
+    def test_invalid_review_quality_exits_1_without_mutation(self):
+        for quality in (-1, 6, "5", True, None):
+            with self.subTest(quality=quality):
+                payload = copy.deepcopy(SESSION_PAYLOAD)
+                payload["session_id"] = f"session-quality-{quality!s}"
+                payload["review_results"] = [{"item_id": "vocab_dag", "quality": quality}]
+                before = self._load("spaced-repetition.json")
+                proc = self._run(payload)
+                self.assertEqual(proc.returncode, 1)
+                self.assertEqual(self._load("spaced-repetition.json"), before)
+                self.assertEqual(len(self._load("session-log.json")["sessions"]), 1)
+
+    def test_unknown_review_id_exits_1_without_mutation(self):
+        payload = copy.deepcopy(SESSION_PAYLOAD)
+        payload["session_id"] = "session-unknown-review"
+        payload["review_results"] = [{"item_id": "missing_item", "quality": 5}]
+        before = self._load("spaced-repetition.json")
+        proc = self._run(payload)
+        self.assertEqual(proc.returncode, 1)
+        self.assertIn(b"unknown review_results item_id", proc.stderr)
+        self.assertEqual(self._load("spaced-repetition.json"), before)
+        self.assertEqual(len(self._load("session-log.json")["sessions"]), 1)
 
 
 if __name__ == "__main__":
