@@ -13,10 +13,10 @@
     "timeline": "2+ years"
   },
   "profile_created": "2026-10-02",
-  "last_updated": "2026-10-02",
-  "current_streak_days": 0,
-  "total_sessions": 0,
-  "total_study_minutes": 0,
+  "last_updated": "2026-10-07",
+  "current_streak_days": 1,
+  "total_sessions": 1,
+  "total_study_minutes": 12,
   "skills": {
     "writing": {
       "current_level": 0,
@@ -25,10 +25,10 @@
       "total_practice_time": 0
     },
     "speaking": {
-      "current_level": 0,
-      "confidence": 0,
-      "last_practiced": null,
-      "total_practice_time": 0
+      "current_level": 1,
+      "confidence": 22,
+      "last_practiced": "2026-10-07",
+      "total_practice_time": 12
     },
     "vocabulary": {
       "current_level": 0,
@@ -58,6 +58,12 @@
       "name": "Getting Started",
       "earned_date": "2026-10-02",
       "description": "Created your learning profile"
+    },
+    {
+      "id": "session_session-001_0_completed_first_speaking_sessi",
+      "name": "Completed first speaking session",
+      "earned_date": "2026-10-07",
+      "description": "Completed first speaking session"
     }
   ],
   "preferences": {

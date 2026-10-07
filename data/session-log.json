@@ -2,8 +2,46 @@
   "metadata": {
     "language": "German",
     "learner_name": "Learner",
-    "total_sessions": 0
+    "total_sessions": 1
   },
-  "sessions": [],
-  "milestones": []
+  "sessions": [
+    {
+      "session_id": "session-001",
+      "date": "2026-10-07",
+      "duration_minutes": 12,
+      "skills_practiced": [
+        "speaking"
+      ],
+      "command_used": "/fluent-learn",
+      "exercises_completed": 4,
+      "accuracy": 0.75,
+      "score_breakdown": {
+        "speaking": 0.75
+      },
+      "topics_covered": [
+        "daily_routine_perfekt",
+        "movement_verbs_sein",
+        "articles_gender",
+        "wellness_vocabulary"
+      ],
+      "breakthroughs": [
+        "Produced 'bin ich gegangen' with sein correctly after correction",
+        "Correct V2 word order after time expressions (Heute habe ich ...)"
+      ],
+      "focus_next_session": [
+        "Articles der/die/das",
+        "Adjective endings"
+      ],
+      "notes": "First speaking session, by voice. Good V2 word order; articles were the most frequent small error.",
+      "achievements_earned": [],
+      "streak_day": 1
+    }
+  ],
+  "milestones": [
+    {
+      "date": "2026-10-07",
+      "milestone": "Completed first speaking session",
+      "session_id": "session-001"
+    }
+  ]
 }

@@ -1,8 +1,78 @@
 {
   "metadata": {
-    "last_updated": "2026-10-02",
-    "total_patterns_tracked": 0,
+    "last_updated": "2026-10-07",
+    "total_patterns_tracked": 3,
     "language": "German"
   },
-  "error_patterns": {}
+  "error_patterns": {
+    "grammar_sein_haben_movement_verbs": {
+      "category": "grammar",
+      "subcategory": "perfekt_auxiliary",
+      "description": "",
+      "severity": "moderate",
+      "frequency": 1,
+      "mastery_level": 0,
+      "difficulty_score": 0.6,
+      "last_seen": "2026-10-07",
+      "last_occurred": "2026-10-07",
+      "next_review": "2026-10-08",
+      "consecutive_correct": 0,
+      "consecutive_incorrect": 1,
+      "examples": [
+        {
+          "incorrect": "am Mittag habe ich in Yoga Studio gegangen",
+          "correct": "Am Mittag bin ich ins Yoga-Studio gegangen",
+          "context": "Perfekt with movement verbs takes sein; in das -> ins",
+          "date": "2026-10-07"
+        }
+      ],
+      "notes": ""
+    },
+    "grammar_article_gender_agreement": {
+      "category": "grammar",
+      "subcategory": "articles_gender",
+      "description": "",
+      "severity": "moderate",
+      "frequency": 1,
+      "mastery_level": 0,
+      "difficulty_score": 0.6,
+      "last_seen": "2026-10-07",
+      "last_occurred": "2026-10-07",
+      "next_review": "2026-10-08",
+      "consecutive_correct": 0,
+      "consecutive_incorrect": 1,
+      "examples": [
+        {
+          "incorrect": "die Yoga-Kurs ... ein neues Technologie",
+          "correct": "der Yoga-Kurs ... eine neue Technologie",
+          "context": "noun gender and article/adjective agreement",
+          "date": "2026-10-07"
+        }
+      ],
+      "notes": ""
+    },
+    "vocab_zu_hause_vs_nach_hause": {
+      "category": "vocabulary",
+      "subcategory": "prepositions_direction",
+      "description": "",
+      "severity": "minor",
+      "frequency": 1,
+      "mastery_level": 0,
+      "difficulty_score": 0.4,
+      "last_seen": "2026-10-07",
+      "last_occurred": "2026-10-07",
+      "next_review": "2026-10-08",
+      "consecutive_correct": 0,
+      "consecutive_incorrect": 1,
+      "examples": [
+        {
+          "incorrect": "danach bin ich zu Hause",
+          "correct": "danach bin ich nach Hause gegangen",
+          "context": "zu Hause = location, nach Hause = direction",
+          "date": "2026-10-07"
+        }
+      ],
+      "notes": ""
+    }
+  }
 }
