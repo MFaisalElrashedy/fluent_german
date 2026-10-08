@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-10-07",
+    "last_updated": "2026-10-08",
     "language": "German"
   },
   "skills": {
@@ -12,11 +12,11 @@
     },
     "speaking": {
       "mastery_level": 1,
-      "confidence_score": 0.75,
-      "total_practice_time": 12,
-      "last_practiced": "2026-10-07",
-      "practice_count": 4,
-      "avg_accuracy": 0.75
+      "confidence_score": 0.732,
+      "total_practice_time": 27,
+      "last_practiced": "2026-10-08",
+      "practice_count": 11,
+      "avg_accuracy": 0.732
     },
     "vocabulary": {
       "mastery_level": 0,

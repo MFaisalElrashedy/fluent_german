@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-10-07",
-    "total_patterns_tracked": 3,
+    "last_updated": "2026-10-08",
+    "total_patterns_tracked": 6,
     "language": "German"
   },
   "error_patterns": {
@@ -33,20 +33,26 @@
       "subcategory": "articles_gender",
       "description": "",
       "severity": "moderate",
-      "frequency": 1,
+      "frequency": 2,
       "mastery_level": 0,
       "difficulty_score": 0.6,
-      "last_seen": "2026-10-07",
-      "last_occurred": "2026-10-07",
-      "next_review": "2026-10-08",
+      "last_seen": "2026-10-08",
+      "last_occurred": "2026-10-08",
+      "next_review": "2026-10-09",
       "consecutive_correct": 0,
-      "consecutive_incorrect": 1,
+      "consecutive_incorrect": 2,
       "examples": [
         {
           "incorrect": "die Yoga-Kurs ... ein neues Technologie",
           "correct": "der Yoga-Kurs ... eine neue Technologie",
           "context": "noun gender and article/adjective agreement",
           "date": "2026-10-07"
+        },
+        {
+          "incorrect": "ein Serie / die Abendessen",
+          "correct": "eine Serie / das Abendessen",
+          "context": "die Serie is feminine, das Abendessen is neuter",
+          "date": "2026-10-08"
         }
       ],
       "notes": ""
@@ -73,6 +79,75 @@
         }
       ],
       "notes": ""
+    },
+    "grammar_perfekt_partizip": {
+      "category": "grammar",
+      "subcategory": "perfekt_partizip",
+      "description": "",
+      "severity": "moderate",
+      "frequency": 1,
+      "mastery_level": 0,
+      "difficulty_score": 0.6,
+      "last_seen": "2026-10-08",
+      "last_occurred": "2026-10-08",
+      "next_review": "2026-10-09",
+      "consecutive_correct": 0,
+      "consecutive_incorrect": 1,
+      "examples": [
+        {
+          "incorrect": "ich habe meinen Freund treffen",
+          "correct": "ich habe meinen Freund getroffen",
+          "context": "Partizip II after haben, not infinitive",
+          "date": "2026-10-08"
+        }
+      ],
+      "notes": ""
+    },
+    "grammar_time_expressions": {
+      "category": "grammar",
+      "subcategory": "time_expressions",
+      "description": "",
+      "severity": "minor",
+      "frequency": 1,
+      "mastery_level": 0,
+      "difficulty_score": 0.3,
+      "last_seen": "2026-10-08",
+      "last_occurred": "2026-10-08",
+      "next_review": "2026-10-09",
+      "consecutive_correct": 0,
+      "consecutive_incorrect": 1,
+      "examples": [
+        {
+          "incorrect": "am gestern Abend",
+          "correct": "gestern Abend",
+          "context": "no preposition before gestern Abend",
+          "date": "2026-10-08"
+        }
+      ],
+      "notes": ""
+    },
+    "vocab_code_switching": {
+      "category": "vocabulary",
+      "subcategory": "code_switching",
+      "description": "",
+      "severity": "minor",
+      "frequency": 1,
+      "mastery_level": 0,
+      "difficulty_score": 0.4,
+      "last_seen": "2026-10-08",
+      "last_occurred": "2026-10-08",
+      "next_review": "2026-10-09",
+      "consecutive_correct": 0,
+      "consecutive_incorrect": 1,
+      "examples": [
+        {
+          "incorrect": "developed ... affect his family",
+          "correct": "entwickelt ... beeinflusst seine Familie",
+          "context": "fell back to English under complexity pressure",
+          "date": "2026-10-08"
+        }
+      ],
+      "notes": "Learner noticed the missing words himself and asked to drill them"
     }
   }
 }

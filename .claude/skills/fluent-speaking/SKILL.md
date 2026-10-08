@@ -85,7 +85,9 @@ Check in this order:
 2. **Grammar** (0-3 points): verb conjugation, word order, articles. Note but don't belabor.
 3. **Vocabulary** (0-2 points): appropriate word choice, no English mixing.
 
-Feedback template (variant of `fluent-feedback-formatter`):
+**Standing learner preference (set 2026-10-08, applies to ALL speaking sessions):** during the session, give **compact, natural-sounding inline corrections** only: a short encouraging line, the corrected sentence, and one brief reason if useful. Do **not** show per-question score breakdowns and do **not** label feedback as "Communication / Grammar / Vocabulary". Score every answer silently using the rubric below, then present the full structured breakdown **once, at the very end** in the session summary. The detailed template below is for that end-of-session summary, not for each answer.
+
+Detailed feedback template (variant of `fluent-feedback-formatter`; end-of-session only):
 
 ```markdown
 {✅ or 🟡} {one-line encouragement}

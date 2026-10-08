@@ -2,7 +2,7 @@
   "metadata": {
     "language": "German",
     "learner_name": "Learner",
-    "total_sessions": 1
+    "total_sessions": 2
   },
   "sessions": [
     {
@@ -35,6 +35,36 @@
       "notes": "First speaking session, by voice. Good V2 word order; articles were the most frequent small error.",
       "achievements_earned": [],
       "streak_day": 1
+    },
+    {
+      "session_id": "session-002",
+      "date": "2026-10-08",
+      "duration_minutes": 15,
+      "skills_practiced": [
+        "speaking"
+      ],
+      "command_used": "/fluent-speaking",
+      "exercises_completed": 7,
+      "accuracy": 0.714,
+      "score_breakdown": {
+        "speaking": 0.714
+      },
+      "topics_covered": [
+        "evening_activities",
+        "perfekt_partizip",
+        "tv_series_plot",
+        "articles_gender"
+      ],
+      "breakthroughs": [
+        "Narrated a complex multi-clause TV plot in German without giving up, despite missing vocabulary"
+      ],
+      "focus_next_session": [
+        "Drill Partizip II after haben/sein",
+        "Use entwickeln and beeinflussen in context"
+      ],
+      "notes": "Voice session. Communication mostly clear (about 7/10). Learner asked for compact inline corrections with the full score breakdown only at the end.",
+      "achievements_earned": [],
+      "streak_day": 2
     }
   ],
   "milestones": [

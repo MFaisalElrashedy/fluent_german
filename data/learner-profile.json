@@ -13,10 +13,10 @@
     "timeline": "2+ years"
   },
   "profile_created": "2026-10-02",
-  "last_updated": "2026-10-07",
-  "current_streak_days": 1,
-  "total_sessions": 1,
-  "total_study_minutes": 12,
+  "last_updated": "2026-10-08",
+  "current_streak_days": 2,
+  "total_sessions": 2,
+  "total_study_minutes": 27,
   "skills": {
     "writing": {
       "current_level": 0,
@@ -26,9 +26,9 @@
     },
     "speaking": {
       "current_level": 1,
-      "confidence": 22,
-      "last_practiced": "2026-10-07",
-      "total_practice_time": 12
+      "confidence": 37,
+      "last_practiced": "2026-10-08",
+      "total_practice_time": 27
     },
     "vocabulary": {
       "current_level": 0,
